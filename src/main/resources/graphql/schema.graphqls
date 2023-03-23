@@ -1,0 +1,19 @@
+type Coffee {
+    id: ID!
+    name: String
+    price: Int
+    desc: String
+}
+
+
+
+type Query {
+    findAll: [Coffee]!
+    findOne(id: ID): Coffee
+}
+
+type Mutation {
+    create(name: String,price: Int,desc: String): Coffee
+    update(id: ID, name: String,price: Int, desc: String): Coffee
+    delete(id: ID): Coffee
+}

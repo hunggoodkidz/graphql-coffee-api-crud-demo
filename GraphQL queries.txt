@@ -1,0 +1,46 @@
+mutation{
+  create(name:"Trà Đào",price:30000,desc:"Trà"){
+    id
+    name
+    price
+    desc
+  }
+}
+
+mutation{
+  delete(id:2){
+    id
+    name
+    price
+    desc
+  }
+}
+
+mutation{
+  update(id:1,name:"Trà Thanh Đào",price:30000,desc:"Trà"){
+    id
+    name
+    price
+    desc
+  }
+}
+
+
+
+query{
+	findAll{
+    id
+    name
+    price
+    desc
+  }
+}
+
+query{
+  findOne(id:1){
+    id
+    name
+    price
+    desc
+  }
+}
